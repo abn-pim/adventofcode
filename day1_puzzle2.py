@@ -1,5 +1,3 @@
-import re
-
 file_path = "advent_input/day1.txt"
 file = open(file_path, 'r').read()
 lines = file.split('\n')
@@ -24,12 +22,8 @@ digit_mapping = {
     '8': '8',
     '9': '9',
 }
-def yo_moma():
-    print("yo mama")
 
-camelCase = "camelCase"
-
-sum = 0
+calibration_value_sum = 0
 for i in range(len(lines)):
     digit_list = []
     for digit, return_digit in digit_mapping.items():
@@ -38,12 +32,13 @@ for i in range(len(lines)):
             pos = lines[i].find(digit,pos_iterator)
             digit_list.append((return_digit,pos))
             pos_iterator = pos + len(digit)
-    # print(digit_list)
     digit_list = sorted(digit_list, key=lambda x: x[1])
-    # print(sorted_list)
-    digit_list = [x[0] for x in digit_list]
-    calibration_value = digit_list[0] + digit_list[-1]
-    sum = sum + int(calibration_value)
+    # sick ass list comprehension, creates a list per digit and only picks the first item of the tuple (drops the pos)
+    # and then picks 1st and last item of each list
+    # also concats the list values using an assignment expression
+    calibration_value = ''
+    [calibration_value := calibration_value + x for x in [[x[0] for x in digit_list][e] for e in (0,-1)]]
+    calibration_value_sum += int(calibration_value)
     # print(sorted(digit_list.items(), key=lambda x: x[1]))
 
-print(sum)
+print(calibration_value_sum)
