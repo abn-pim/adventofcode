@@ -1,9 +1,7 @@
 import re
 
 file_path = "advent_input/day1.txt"
-
 file = open(file_path, 'r').read()
-
 lines = file.split('\n')
 
 digit_mapping = {
@@ -26,11 +24,12 @@ digit_mapping = {
     '8': '8',
     '9': '9',
 }
+def yo_moma():
+    print("yo mama")
 
-# lines = ["xtwone3four","12bruhoneone3","1yoyo5six"]
+camelCase = "camelCase"
 
 sum = 0
-
 for i in range(len(lines)):
     digit_list = []
     for digit, return_digit in digit_mapping.items():
