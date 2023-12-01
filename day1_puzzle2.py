@@ -28,7 +28,7 @@ digit_mapping = {
 
 calibration_value_sum = 0
 for i in range(len(lines)):
-    # find all digits in a line append them to a list as tuples with their positions
+    # find all digits and their positions in a line and append them to a list as tuples
     digit_list = []
     for digit, return_digit in digit_mapping.items():
         pos_iterator = 0
@@ -42,9 +42,9 @@ for i in range(len(lines)):
     
     # create a string of the first and last digits
     calibration_value = ''
-    [calibration_value := calibration_value + x for x in # concats the 1st and last digits with the walrus operator
+    [calibration_value := calibration_value + x for x in # concatenate the 1st and last digits with the walrus operator
         [
-            [x[0] for x in digit_list] # create a list of the 1st elements of each tuple, I.E. the digits
+            [x[0] for x in digit_list] # create a list of the 1st item of each tuple, I.E. the digits
             [e] for e in (0,-1) 
         ] # create a list with only the 1st and last item in the list of digits
     ]
