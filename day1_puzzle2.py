@@ -33,12 +33,13 @@ for i in range(len(lines)):
             digit_list.append((return_digit,pos))
             pos_iterator = pos + len(digit)
     digit_list = sorted(digit_list, key=lambda x: x[1])
-    # sick ass list comprehension, creates a list per digit and only picks the first item of the tuple (drops the pos)
-    # and then picks 1st and last item of each list
-    # also concats the list values using an assignment expression
     calibration_value = ''
-    [calibration_value := calibration_value + x for x in [[x[0] for x in digit_list][e] for e in (0,-1)]]
+    [calibration_value := calibration_value + x for x in # concats the digits with the walrus operator
+        [
+            [x[0] for x in digit_list] # creates a list of the 1st elements of each tuple, I.E. the digits
+            [e] for e in (0,-1) # creates a list of the 1st and last item in the list of digits
+        ]
+    ]
     calibration_value_sum += int(calibration_value)
-    # print(sorted(digit_list.items(), key=lambda x: x[1]))
 
 print(calibration_value_sum)
