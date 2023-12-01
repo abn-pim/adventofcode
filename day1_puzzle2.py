@@ -40,7 +40,7 @@ for i in range(len(lines)):
     # sort the list of digits by their position
     digit_list = sorted(digit_list, key=lambda x: x[1])
     
-    # create a string of the first and last digits
+    # create a string of the first and last digits, I.E. the calibration value
     calibration_value = ''
     [calibration_value := calibration_value + x for x in # concatenate the 1st and last digits with the walrus operator
         [
