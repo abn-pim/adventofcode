@@ -1,0 +1,168 @@
+<svg fill="none" viewBox="0 0 600 300" width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        @keyframes wiggle  {
+            0% { transform: rotate( 0.0deg) }
+           10% { transform: rotate(14.0deg) }
+           20% { transform: rotate(-8.0deg) }
+           30% { transform: rotate(14.0deg) }
+           40% { transform: rotate(-4.0deg) }
+           50% { transform: rotate(10.0deg) }
+           60% { transform: rotate( 0.0deg) }
+          100% { transform: rotate( 0.0deg) }
+        }
+
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        @keyframes snowflakes {
+            0% { top: -10px; left: calc(random() * 100%); opacity: 0.5; }
+            100% { top: 100vh; left: calc(random() * 100%); opacity: 0.5; }
+        }
+        /* Randomize animation duration for each snowflake */
+        @keyframes randomize-duration {
+            0% { --random-duration: 0s; left: calc(random() * 100%); }
+            100% { --random-duration: calc(20s + var(--random-duration)); top: 100vh; left: calc(random() * 100%); }
+        }
+
+        span {
+            position: relative;
+            animation: snowflakes 20s linear infinite;
+            left: calc(random() * 100%);
+            opacity: 0.5;
+        }
+
+    /* Apply randomize-duration animation to each snowflake */
+        span {
+            animation: snowflakes 20s linear infinite, randomize-duration;
+            left: calc(random() * 100%);
+        }
+        .snowflake1 {
+            animation: snowflakes 8s linear infinite;
+            animation-delay: 0.5s;
+        }
+        .snowflake2 {
+            animation: snowflakes 6.3s linear infinite;
+            animation-delay: 0s;
+        }
+        .snowflake3 {
+            animation: snowflakes 5s linear infinite;
+            animation-delay: 3s;
+        }
+        .snowflake4 {
+            animation: snowflakes 5.5s linear infinite;
+            animation-delay: 2s;
+        }
+        .snowflake5 {
+            animation: snowflakes 7s linear infinite;
+            animation-delay: 3s;
+        }
+        .snowflake6 {
+            animation: snowflakes 6s linear infinite;
+            animation-delay: 1s;
+        }
+        .snowflake7 {
+            animation: snowflakes 5.7s linear infinite;
+            animation-delay: 2s;
+        }
+        .snowflake8 {
+            animation: snowflakes 7.4s linear infinite;
+            animation-delay: 0.3s;
+        }
+        .snowflake9 {
+            animation: snowflakes 4.5s linear infinite;
+            animation-delay: 0s;
+        }
+
+        .container {
+           position: absolute;
+           top: 0;
+           z-index: -1;
+          background: linear-gradient(-45deg, #FFFFFF, #850101, #013220, #23d59d);
+          background-size: 400% 400%;
+          animation: gradient 15s ease infinite;
+
+          width: 100%;
+          height: 300px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .wiggle {
+          animation: wiggle 1.5s linear -0.5s infinite;
+          display: inline-block;
+          transform-origin: 70% 70%;
+        }
+
+        @media (prefers-reduced-motion) {
+          .container {
+            animation: none;
+          }
+
+          .hi {
+            animation: none;
+          }
+        }
+      </style>
+      <span class="snowflake1">❄️</span>
+            <span class="snowflake2">❄️</span>
+            <span class="snowflake3">❄️</span>
+            <span class="snowflake4">❄️</span>
+            <span class="snowflake5">❄️</span>
+            <span class="snowflake6">❄️</span>
+            <span class="snowflake1">❄️</span>
+            <span class="snowflake4">❄️</span>
+            <span class="snowflake2">❄️</span>
+            <span class="snowflake7">❄️</span>
+            <span class="snowflake4">❄️</span>
+            <span class="snowflake2">❄️</span>
+            <span class="snowflake9">❄️</span>
+            <span class="snowflake1">❄️</span>
+            <span class="snowflake6">❄️</span>
+            <span class="snowflake2">❄️</span>
+            <span class="snowflake9">❄️</span>
+            <span class="snowflake5">❄️</span>
+            <span class="snowflake2">❄️</span>
+            <span class="snowflake6">❄️</span>
+            <span class="snowflake9">❄️</span>
+            <span class="snowflake7">❄️</span>
+            <span class="snowflake2">❄️</span>
+            <span class="snowflake1">❄️</span>
+            <span class="snowflake4">❄️</span>
+            <span class="snowflake2">❄️</span>
+            <span class="snowflake6">❄️</span>
+            <span class="snowflake1">❄️</span>
+            <span class="snowflake9">❄️</span>
+            <span class="snowflake3">❄️</span>
+            <span class="snowflake7">❄️</span>
+            <span class="snowflake2">❄️</span>
+            <span class="snowflake9">❄️</span>
+            <span class="snowflake1">❄️</span>
+            <span class="snowflake4">❄️</span>
+            <span class="snowflake2">❄️</span>
+            <span class="snowflake1">❄️</span>
+            <span class="snowflake8">❄️</span>
+            <span class="snowflake2">❄️</span>
+            <span class="snowflake6">❄️</span>
+            <span class="snowflake1">❄️</span>
+      <div class="container">
+        <h1><div class="wiggle">🎄</div> Pim's adventofcode solutions <div class="wiggle">🎅</div></h1>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
